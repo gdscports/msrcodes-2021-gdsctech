@@ -4,9 +4,10 @@ interface UnsplashImageProps {
   src: string;
   width: number;
   height: number;
+  className?: string;
 }
 
-const UnsplashImage = ({src, width, height}: UnsplashImageProps) => (
+const UnsplashImage = ({src, width, height, className}: UnsplashImageProps) => (
   <Image
     src={src}
     loader={({width, src, quality}) =>
@@ -16,6 +17,7 @@ const UnsplashImage = ({src, width, height}: UnsplashImageProps) => (
     blurDataURL="data:image/svg+xml;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII="
     width={width}
     height={height}
+    className={className}
   />
 );
 
